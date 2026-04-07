@@ -1,0 +1,14 @@
+name: 01-basic-ci
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Print info
+        run: echo "CI Triggered by push to main branch"
